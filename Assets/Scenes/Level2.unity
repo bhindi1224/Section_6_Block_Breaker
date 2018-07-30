@@ -4474,11 +4474,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 50813518573663352, guid: c68f736835220d7439208f7506fbd6f6,
-        type: 2}
-      propertyPath: m_AngularDrag
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 114516585956257002, guid: c68f736835220d7439208f7506fbd6f6,
         type: 2}
       propertyPath: paddle1
