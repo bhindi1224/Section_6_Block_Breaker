@@ -7,7 +7,7 @@ public class Block : MonoBehaviour {
 
     // cached reference
     Level level;
-    GameStatus status;
+    GameSession status;
 
         private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -26,7 +26,7 @@ public class Block : MonoBehaviour {
     {
         level = FindObjectOfType<Level>();
         level.CountBreakableBlocks();
-        status = FindObjectOfType<GameStatus>();
+        status = FindObjectOfType<GameSession>();
     }
 
 }
