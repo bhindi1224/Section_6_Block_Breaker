@@ -28,7 +28,7 @@ public class GameSession : MonoBehaviour {
 
     private void Start()
     {
-        scoreText.text = currentScore.ToString();
+        scoreText.text = "Score\n" + currentScore.ToString();
     }
 
 
@@ -40,7 +40,7 @@ public class GameSession : MonoBehaviour {
     public void AddToScore()
     {
         currentScore += pointsPerBlockDestroyed;
-        scoreText.text = currentScore.ToString();
+        scoreText.text = "Score\n" + currentScore.ToString();
 
     }
 

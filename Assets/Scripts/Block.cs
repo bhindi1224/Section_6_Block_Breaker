@@ -4,29 +4,36 @@ using UnityEngine;
 
 public class Block : MonoBehaviour {
     [SerializeField] AudioClip breakSound;
+    [SerializeField] GameObject blockSparklesVFX;
 
     // cached reference
     Level level;
-    GameSession status;
 
-        private void OnCollisionEnter2D(Collision2D collision)
+    private void Start()
+    {
+        level = FindObjectOfType<Level>();
+        level.CountBreakableBlocks();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         DestroyBlock();
     }
 
     private void DestroyBlock()
     {
+        FindObjectOfType<GameSession>().AddToScore();
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
         Destroy(gameObject);
         level.BlockDestroyed();
-        status.AddToScore();
+        TriggerSparklesVFX();
     }
 
-    private void Start()
+    private void TriggerSparklesVFX()
     {
-        level = FindObjectOfType<Level>();
-        level.CountBreakableBlocks();
-        status = FindObjectOfType<GameSession>();
+        GameObject sparkles = Instantiate(blockSparklesVFX, transform.position, transform.rotation);
+        Destroy(sparkles, 1f);
     }
+
 
 }
