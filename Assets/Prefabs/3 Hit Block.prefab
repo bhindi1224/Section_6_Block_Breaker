@@ -80,7 +80,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakSound: {fileID: 8300000, guid: 086145e916883c4458161941d1f4fe38, type: 3}
   blockSparklesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 2}
-  maxHits: 3
   hitSprites:
   - {fileID: 21300000, guid: f99b500d8eb12a44cb202be86cfd5365, type: 3}
   - {fileID: 21300000, guid: 8833d715ba1d4df4cbb65bee88174115, type: 3}
@@ -120,7 +119,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 80ae6d603e42f834e8b9d2816a4265af, type: 3}
-  m_Color: {r: 1, g: 0.94117653, b: 0.003921569, a: 1}
+  m_Color: {r: 1, g: 0.085108675, b: 0.0039215684, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
