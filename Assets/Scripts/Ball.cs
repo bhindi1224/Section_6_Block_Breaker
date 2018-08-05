@@ -30,7 +30,7 @@ public class Ball : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update ()
-    {
+    {        
         if (hasStarted == false)
         {
             LockBallToPaddle();
@@ -55,6 +55,11 @@ public class Ball : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (Input.GetMouseButton(0) && collision.gameObject.name == paddle1.name)
+        {
+            LockBallToPaddle();
+            hasStarted = false;
+        }
         Vector2 velocityTweak = new Vector2
             // used UnityEngine.Random instead of removing the namespaces up top
             (UnityEngine.Random.Range(0f, randomFactor), UnityEngine.Random.Range(0f, randomFactor)); 
