@@ -12,7 +12,8 @@ public class GameSession : MonoBehaviour {
 
     // state variables
     [SerializeField] int currentScore;
-
+    [SerializeField] bool isAutoPlayEnabled = false;
+        
     private void Awake()
     {
         int gameStatusCount = FindObjectsOfType<GameSession>().Length;
@@ -47,5 +48,9 @@ public class GameSession : MonoBehaviour {
     public void RestartGame()
     {
         Destroy(gameObject);
+    }
+    public bool IsAutoPlayEnabled()
+    {
+        return isAutoPlayEnabled;
     }
 }
